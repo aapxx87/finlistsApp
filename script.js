@@ -101,11 +101,6 @@ class MainData {
 }
 
 
-// инстанс основной даты прилы
-const appData = new MainData()
-
-
-
 
 // класс нового юзера
 class Users {
@@ -114,6 +109,12 @@ class Users {
       this.userPassword = userPassword
   }
 }
+
+
+
+// инстанс основной даты прилы
+const appData = new MainData()
+
 
 // создаем новых юзеров
 const newUser = new Users('Igor', 1111)
@@ -140,11 +141,11 @@ appData.addNewFinlist('Vacation', 'rub')
 
 appData.addNewFinlist('Save', 'usd')
 
-console.log(appData.getAllFinlists());
 
 
 
-console.log(appData.addNewMovements('Save', 2000));
+
+appData.addNewMovements('Save', 2000);
 
 console.log(appData.getAllFinlists());
 

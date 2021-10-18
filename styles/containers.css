@@ -11,6 +11,12 @@
   position: relative;
 }
 
+
+.container-reg-signin {
+  width: 100%;
+  height: 100%;
+}
+
 /* контейнер total balance */
 .container-total-balance {
   margin-top: 20px;

@@ -1,0 +1,88 @@
+/* главный конетйнер */
+.container-general {
+  width: 380px;
+  height: 800px;
+  margin: 50px auto;
+  color: #fff;
+  padding: 30px 25px;
+  background: #25273F;
+  box-shadow: 18px 5px 21px 5px rgba(0,0,0,0.14);
+  border-radius: 3px;
+  position: relative;
+}
+
+/* контейнер total balance */
+.container-total-balance {
+  margin-top: 20px;
+}
+
+/* контейнер куда выгружаются комоненты финлистов */
+.container-finList {
+  width: 100%;
+  height: 640px;
+  overflow-y: scroll;
+  /* border: 1px solid rgb(236, 247, 143); */
+  margin-top: 60px;
+  border-radius: 5px;
+}
+
+/* убираем полосу прокрутки */
+.container-finList::-webkit-scrollbar {
+  width:0px;
+}
+
+/* контейнер с кнопками добавления финлистов и движений */
+.container-btns-add-finlists {
+  position: absolute;
+  left: 50%;
+  bottom: 70px;
+  transform: translateX(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* контейнер модалки добавления финлистов */
+.container-modal-add-finlist {
+  width: 70%;
+  height: 320px;
+  background: #2C2E52;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  /* border: 1px solid rgb(236, 247, 143); */
+  text-align: center;
+  display: none;
+  z-index: 10;
+}
+
+/* контейнер модалки добавления movements по кнопке Add Mov */
+.container-modal-add-movements {
+  width: 60%;
+  height: 220px;
+  background: #2C2E52;
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  /* border: 1px solid rgb(236, 247, 143); */
+  text-align: center;
+  display: none;
+  z-index: 10;
+}
+
+
+/* контейнер модалки добавления movements по кнопке Plus в самом Финлисте */
+/* .container-modal-add-mov-plus {
+  width: 70%;
+  height: 220px;
+  background: #2C2E52;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid rgb(236, 247, 143);
+  text-align: center;
+  display: none;
+} */

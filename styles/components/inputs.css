@@ -1,0 +1,15 @@
+.input-fl-mov {
+  border: 1px solid #7A3A5D;
+  background: transparent;
+  width: 70%;
+  border-radius: 50px;
+  color: rgb(204, 202, 202);
+  padding: 10px 15px;
+  font-size: 15px;
+  margin: 20px auto;
+  display: block;
+}
+
+.input-fl-mov:focus {
+  outline: none;
+}

@@ -7,9 +7,9 @@ const clearInputValue = function () {
 
 // функция вызова окна нотификации об ошибках при регистрации
 const displayWarningNotification = function (notificationText) {
-  boxWarning.textContent = notificationText
+  boxWarning.innerHTML = `<p>${notificationText}</p>`
   boxWarning.style.background = '#6d9656'
-  boxWarning.style.display = 'block'
+  boxWarning.style.display = 'flex'
 }
 
 

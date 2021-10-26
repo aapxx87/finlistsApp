@@ -16,7 +16,7 @@ btnLogin.addEventListener('click', function () {
 
     boxWarningLogin.textContent = 'Неправильный логин или пароль'
     boxWarningLogin.style.background = '#EF3957'
-    boxWarningLogin.style.display = 'block'
+    boxWarningLogin.style.display = 'flex'
 
     setTimeout(function () {
       boxWarningLogin.style.display = 'none'

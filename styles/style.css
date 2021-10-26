@@ -17,6 +17,7 @@
 
 body {
   background: #25273F;
+  overflow: hidden;
 }
 
 .visible {

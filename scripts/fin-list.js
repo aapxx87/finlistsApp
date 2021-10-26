@@ -193,6 +193,14 @@ btnAddNewFinList.addEventListener('click', function () {
 
   finListNumberInArr()
 
+  inputFinListName.value = ''
+  inputFinListCur.value = ''
+
+  modalFinList.style.display = 'none'
+  overlay.style.display = 'none'
+
+
+
 })
 
 

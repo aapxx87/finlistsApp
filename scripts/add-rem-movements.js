@@ -14,6 +14,14 @@ const finListNumberInArr = function () {
       indexFinList = el.classList[1];
 
       modalMovements.style.display = 'block'
+
+      // проверяем какая валюта финлиста6 чтобы при необходимости отобрать инпут для курса обмена
+      if (appData.finListCurrencyCheck(indexFinList) === 1) {
+        inputMovFLexrate.style.display = 'none'
+      } else {
+        inputMovFLexrate.style.display = 'block'
+      }
+
       overlay.style.display = 'block'
 
       inputMovFLamount.focus()

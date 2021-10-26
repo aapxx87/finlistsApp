@@ -108,6 +108,18 @@ class MainData {
   }
 
 
+  // метод проверки финлиста на тип валюты, чтобы знать выдавать или нет окно с exrate
+  finListCurrencyCheck(index) {
+
+    if (this.#finlists[index].finlistCurrency === 'rub') {
+      return 1
+    } else {
+      return 0
+    }
+
+  }
+
+
   // метод добавления нового movements в финлист
   addNewMovements(finListIndex, movAmount, exRateInp) {
 

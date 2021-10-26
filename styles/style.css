@@ -1,14 +1,10 @@
 @import url('containers.css');
 
-@import url('components/comp-finList-box.css');
-@import url('components/table.css');
 @import url('components/buttons.css');
-@import url('components/inputs.css');
-@import url('components/comp-modal-add-finList.css');
-@import url('components/comp-modal-add-mov.css');
-@import url('components/comp-total-balance.css');
-@import url('components/overlay.css');
-
+@import url('components/pages-signUp-Login.css');
+@import url('components/fin-list-box.css');
+@import url('components/table.css');
+@import url('components/modal-add-finlist.css');
 
 
 
@@ -23,9 +19,6 @@ body {
   background: #1C1F33;
 }
 
-
-.note {
-  width: 50px;
-  height: 50px;
-  background: red;
+.visible {
+  display: block;
 }

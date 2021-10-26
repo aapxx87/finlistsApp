@@ -1,0 +1,87 @@
+/* Кнопки переключсения между логином и регой */
+.reg-mode {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+
+  /* display: none; */
+}
+
+.reg-mode a {
+  color: #fff;
+  text-decoration: none;
+  color:#EF3957;
+  border-bottom: 1px solid #fff;
+  border-color: #EF3957;
+}
+
+/* Блок Рега Логин */
+
+.login-signUp-title {
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+.input-box-signUp-username,
+.input-box-signUp-password,
+.input-box-signUp-password-rep,
+.input-username-log-box,
+.input-password-log-box
+ {
+  position: relative;
+}
+
+.label-input-box-signUp-username,
+.label-input-box-signUp-password,
+.label-input-box-signUp-password-rep,
+.label-input-box-login-username,
+.label-input-box-login-password {
+  position: absolute;
+  top: 9px;
+  left: 15px;
+  color: #8E939E;
+  transition: all .3s;
+  z-index: 1;
+}
+
+.labelActive {
+  position: absolute;
+  top: -22px;
+  left: 16px;
+  color: #8E939E;
+  font-size: 14px;
+}
+
+.input-box {
+  margin-bottom: 40px;
+}
+
+input {
+  border: 1px solid #7A3A5D;
+  background: transparent;
+  width: 100%;
+  /* height: 35px; */
+  /* margin-bottom: 35px; */
+  border-radius: 50px;
+  color: rgb(204, 202, 202);
+  padding: 10px 15px;
+  font-size: 15px;
+  z-index: 10;
+}
+
+input:focus {
+  outline: none;
+}
+
+.notification {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  background: #6d9656;
+  /* border: 1px solid #EF3957; */
+  border-radius: 50px;
+  margin-top: 30px;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}

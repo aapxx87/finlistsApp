@@ -1,9 +1,12 @@
 .btn {
-  color: rgb(204, 196, 196);
+  width: 100%;
+  padding: 13px 10px;
+  background: #EF3957;
+  border-radius: 5px;
+  border: none;
+  border-radius: 50px;
+  color: #fff;
   text-decoration: none;
-  background: rgb(156, 78, 23);
-  padding: 10px 20px;
-  display: inline-block;
 }
 
 .btn-addModalFinList {
@@ -15,6 +18,10 @@
   height: 50px;
   background: transparent;
   border: 1px solid rgb(221, 213, 213);
-
+  text-decoration: none;
 }
+
+
+
+
 

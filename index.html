@@ -12,13 +12,181 @@
 <body>
 
 
-  <!-- основной контейнер -->
+  <!-- Основной контейнер -->
   <div class="container-general">
 
+    <!-- контейнер с блоками регистрации, логина, переключением между регой и логином -->
+    <div class="container-signup-login">
 
-    <div class="container-reg-signin">
+      <!-- в логин рег секциях кнопки переключения между Логин и Регистрация -->
+      <div class="reg-mode">
+        <a href="#" class="login-reg reg-box">Sign Up</a>
+        <a href="#" class="login-reg login-box">Login</a>
+      </div>
 
 
+      <!-- Контейнер регистрации -->
+      <div class="container-signup">
+
+        <p class="login-signUp-title">Sign Up</p>
+
+        <form class="signUp-form">
+
+          <div class="input-box input-box-signUp-username">
+            <input type="text" class="log-sing input-username">
+            <label for="input-username" class="label label-input-box-signUp-username">Username</label>
+          </div>
+
+          <div class="input-box input-box-signUp-password">
+            <input type="text" class="log-sing input-password">
+            <label for="input-password" class="label label-input-box-signUp-password">Password</label>
+          </div>
+
+          <div class="input-box input-box-signUp-password-rep">
+            <input type="text" class="log-sing input-password-repeat">
+            <label for="input-password" class="label-input-box-signUp-password-rep">Repeat password</label>
+          </div>
+
+          <button class="btn btn-signUp">Sign Up</button>
+
+          <div class="notification">Аккаунт создан</div>
+
+        </form>
+
+      </div>
+
+
+      <!-- Контейнер логина -->
+      <div class="container-login">
+
+        <p class="login-signUp-title">Login</p>
+
+        <form class="signUp-form">
+
+          <div class="input-box input-username-log-box">
+            <input type="text" class="input-username-log">
+            <label for="input-username-log" class="label-input-box-login-username">Username</label>
+          </div>
+
+          <div class="input-box input-password-log-box">
+            <input type="text" class="input-password-log">
+            <label for="input-password-log" class="label-input-box-login-password">Password</label>
+          </div>
+
+          <button class="btn btn-login">Login</button>
+
+          <div class="notification notification-login"></div>
+
+        </form>
+
+      </div>
+
+    </div>
+
+
+    <!-- контейнер с главной страницей -->
+    <div class="container-mainPage">
+
+      <!-- Контейнер с ФинЛистами -->
+      <div class="container-finList">
+
+        <!-- Компонент - финлист - вставляется через JS
+        <div class="comp-finList-box">
+          <div class="finlist-header">
+            <div class="toggle-click-open">
+              <h3 class="finList-title">Машина <span>(rub)</span> </h3>
+              <h3 class="finList-total">Total: 15000</h3>
+            </div>
+            <p class="finList-addNewMov">+</p>
+          </div>
+
+
+          <table class="finlist-table">
+            <tr>
+              <td class="col table-header">Date</td>
+              <td class="col table-header">Amount</td>
+            </tr>
+            <tr>
+              <td class="col">01.03.2021</td>
+              <td class="col">4000</td>
+            </tr>
+            <tr>
+              <td class="col">01.02.2021</td>
+              <td class="col">6000</td>
+            </tr>
+            <tr>
+              <td class="col">01.01.2021</td>
+              <td class="col">5000</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="comp-finList-box">
+          <div class="finlist-header">
+            <div class="toggle-click-open">
+              <h3 class="finList-title">Квартира <span>(rub)</span> </h3>
+              <h3 class="finList-total">Total: 70000</h3>
+            </div>
+            <p class="finList-addNewMov">+</p>
+          </div>
+
+
+          <table class="finlist-table">
+            <tr>
+              <td class="col table-header">Date</td>
+              <td class="col table-header">Amount</td>
+            </tr>
+            <tr>
+              <td class="col">01.03.2021</td>
+              <td class="col">4000</td>
+            </tr>
+            <tr>
+              <td class="col">01.02.2021</td>
+              <td class="col">6000</td>
+            </tr>
+            <tr>
+              <td class="col">01.01.2021</td>
+              <td class="col">5000</td>
+            </tr>
+          </table>
+        </div> -->
+
+      </div>
+
+
+      <!-- модалка добавления movements по кнопке Plus -->
+      <div class="container-modal-add-movements">
+        <input type="number" class="input-fl-mov input-add-mov-amount" placeholder="Amount">
+        <input type="number" class="input-fl-mov input-add-mov-exrate" placeholder="Exchange rate">
+        <a href="#" class="btn btn-addMov">Add</a>
+      </div>
+
+
+
+      <!-- модалка добавления финлистов по круглой кнопке +/-  -->
+      <div class="container-modal-add-finlist">
+
+        <!-- добавление ФинЛиста -->
+        <input type="text" class="input-fl-mov input-add-finlist-name" placeholder="Name">
+        <input type="text" class="input-fl-mov input-add-finlist-cur" placeholder="Currency">
+
+        <a href="#" class="btn btn-addFinList">Add FL</a>
+
+        <!-- удаление ФинЛиста -->
+        <input type="text" class=" input-fl-mov input-remove-finlist-name" placeholder="Name">
+        <a href="#" class="btn btn-removeFinList">Rem FL</a>
+
+      </div>
+
+      <!-- overlay при открытии модалки доб/уд финлиста -->
+      <div class="container-overlay"></div>
+
+
+
+      <!-- кнопка добавления ФинЛистов-->
+      <div class="container-btns-add-finlists">
+        <a href="#" class="btn btn-addModalFinList">+/-</a>
+      </div>
 
 
 
@@ -26,19 +194,32 @@
 
 
 
-  </div>
 
 
 
+    <!-- селекторы -->
+    <script src="scripts/selectors.js"></script>
 
+    <!-- основные ООП скрипты -->
+    <script src="scripts/script.js"></script>
 
+    <!-- декоративные скрипты для страниц SignUp и Login -->
+    <script src="scripts/decorate-reg-login.js"></script>
 
+    <!-- скрипты для регистрации нового юзера -->
+    <script src="scripts/reg-new-user.js"></script>
 
+    <!-- скрипты для логина юзера -->
+    <script src="scripts/login-user.js"></script>
 
+    <!-- скрипты для фукнционала финлиста -->
+    <script src="scripts/fin-list.js"></script>
 
+    <!-- скрипты для фукнционала добавления и удаления финлистов -->
+    <script src="scripts/add-rem-new-finlist.js"></script>
 
-
-  <script src="script.js"></script>
+    <!-- скрипты для добавления удаления movements -->
+    <script src="scripts/add-rem-movements.js"></script>
 
 </body>
 

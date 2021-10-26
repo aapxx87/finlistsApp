@@ -1,25 +1,32 @@
-/* главный конетйнер */
+/* главный конейнер */
 .container-general {
-  width: 380px;
-  height: 800px;
-  margin: 50px auto;
+  max-width: 450px;
+  height: 100vh;
   color: #fff;
   padding: 30px 25px;
   background: #25273F;
-  box-shadow: 18px 5px 21px 5px rgba(0,0,0,0.14);
-  border-radius: 3px;
-  position: relative;
+}
+
+/* контейнер с решистрацией и логином */
+.container-signup-login {
+    display: none;
 }
 
 
-.container-reg-signin {
-  width: 100%;
-  height: 100%;
+/* контейнер регистрации */
+.container-signup {
+  /* display: none; */
 }
 
-/* контейнер total balance */
-.container-total-balance {
-  margin-top: 20px;
+
+/* контейнер логина */
+.container-login {
+  display: none;
+}
+
+/* контейнер главной страницы */
+.container-mainPage {
+  /* display: none; */
 }
 
 /* контейнер куда выгружаются комоненты финлистов */
@@ -30,11 +37,6 @@
   /* border: 1px solid rgb(236, 247, 143); */
   margin-top: 60px;
   border-radius: 5px;
-}
-
-/* убираем полосу прокрутки */
-.container-finList::-webkit-scrollbar {
-  width:0px;
 }
 
 /* контейнер с кнопками добавления финлистов и движений */
@@ -57,10 +59,21 @@
   top: 100px;
   left: 50%;
   transform: translateX(-50%);
-  /* border: 1px solid rgb(236, 247, 143); */
   text-align: center;
   display: none;
   z-index: 10;
+}
+
+/* overlay при открытии модалок */
+.container-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(37, 39, 63, 0.75);
+  z-index: 5;
+  display: none;
 }
 
 /* контейнер модалки добавления movements по кнопке Add Mov */
@@ -77,18 +90,3 @@
   display: none;
   z-index: 10;
 }
-
-
-/* контейнер модалки добавления movements по кнопке Plus в самом Финлисте */
-/* .container-modal-add-mov-plus {
-  width: 70%;
-  height: 220px;
-  background: #2C2E52;
-  position: absolute;
-  top: 100px;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 1px solid rgb(236, 247, 143);
-  text-align: center;
-  display: none;
-} */

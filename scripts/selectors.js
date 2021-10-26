@@ -30,6 +30,7 @@ const inputRepeatPassword = document.querySelector('.input-password-repeat')
 const inputUsernameSignUpLabel = document.querySelector('.label-input-box-signUp-username')
 const inputUsernameSignUpPassLabel = document.querySelector('.label-input-box-signUp-password')
 const inputUsernameSignUpPassRepeatLabel = document.querySelector('.label-input-box-signUp-password-rep')
+const labels = document.querySelectorAll('.label')
 
 // -- Buttons
 const btnSignUp = document.querySelector('.btn-signUp')

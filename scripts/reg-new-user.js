@@ -5,6 +5,13 @@ const clearInputValue = function () {
   inputRepeatPassword.value = ''
 }
 
+// фукнция возврата лейблов после ошибки валидации обратно в инпцты (опускаются обратно вниз)
+const labelDown = function () {
+  labels.forEach(function (el) {
+    el.classList.remove('labelActive')
+  })
+}
+
 // функция вызова окна нотификации об ошибках при регистрации
 const displayWarningNotification = function (notificationText) {
   boxWarning.innerHTML = `<p>${notificationText}</p>`
@@ -44,6 +51,8 @@ btnSignUp.addEventListener('click', function () {
       boxWarning.style.display = 'none'
     }, 3000)
 
+    labelDown()
+
     clearInputValue()
 
   } else if (appData.validationNewSignUp(inputUsername.value, inputPassword.value, inputRepeatPassword.value) === 2) {
@@ -56,6 +65,8 @@ btnSignUp.addEventListener('click', function () {
 
     clearInputValue()
 
+    labelDown()
+
   } else if (appData.validationNewSignUp(inputUsername.value, inputPassword.value, inputRepeatPassword.value) === 3) {
 
     displayWarningNotification('Введите имя')
@@ -66,6 +77,8 @@ btnSignUp.addEventListener('click', function () {
 
     clearInputValue()
 
+    labelDown()
+
   } else if (appData.validationNewSignUp(inputUsername.value, inputPassword.value, inputRepeatPassword.value) === 4) {
 
     displayWarningNotification('Введите пароль')
@@ -75,6 +88,8 @@ btnSignUp.addEventListener('click', function () {
     }, 3000)
 
     clearInputValue()
+
+    labelDown()
 
   }
 

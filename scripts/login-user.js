@@ -18,6 +18,14 @@ btnLogin.addEventListener('click', function () {
     boxWarningLogin.style.background = '#EF3957'
     boxWarningLogin.style.display = 'flex'
 
+
+    labels.forEach(function (el) {
+      el.classList.remove('labelActive')
+    })
+
+
+    // inputUsernameLoginLabel.classList.remove('labelActive')
+
     setTimeout(function () {
       boxWarningLogin.style.display = 'none'
     }, 3000)

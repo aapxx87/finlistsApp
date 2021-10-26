@@ -231,8 +231,6 @@ appData.addNewMovements(0, 10000)
 appData.addNewMovements(1, 262, 70)
 
 
-// console.log(appData.getAllFinlists());
-
 
 
 

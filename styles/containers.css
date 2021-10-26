@@ -9,7 +9,7 @@
 
 /* контейнер с решистрацией и логином */
 .container-signup-login {
-    display: none;
+   /* display: none; */
 }
 
 
@@ -26,7 +26,7 @@
 
 /* контейнер главной страницы */
 .container-mainPage {
-  /* display: none; */
+  display: none;
 }
 
 /* контейнер куда выгружаются комоненты финлистов */

@@ -177,14 +177,7 @@ class MainData {
         console.log('Недостаточно баланса');
       }
 
-
-
-
     }
-
-
-
-
 
   }
 
@@ -230,13 +223,8 @@ appData.addNewUser(newUser)
 appData.addNewUser(newUser2)
 
 
-
-
-
 appData.addNewFinlist('Накопления', 'rub')
-
 appData.addNewFinlist('Доллары', 'usd')
-
 appData.addNewMovements(0, 30000)
 appData.addNewMovements(0, 10000)
 

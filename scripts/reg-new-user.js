@@ -24,7 +24,7 @@ const displayWarningNotification = function (notificationText) {
 btnSignUp.addEventListener('click', function () {
 
   // создаем инстанс юзера
-  const newUser = new Users(inputUsername.value, inputPassword.value)
+  const newUser = new Users(inputUsername.value, +inputPassword.value)
 
   // Валидация при регистрации по методу validationNewSignUp
   if (appData.validationNewSignUp(inputUsername.value, inputPassword.value, inputRepeatPassword.value) === 1) {

@@ -34,7 +34,7 @@ const displayFinlists = function () {
 
       // сортируем по дате исключительно массив movements
       const itemSort = item.finlistMovements.sort(function (a, b) {
-        return new Date(b.date) - new Date(a.date)
+        return new Date(a.movDate) - new Date(b.movDate)
       })
 
       // копируем основной массив

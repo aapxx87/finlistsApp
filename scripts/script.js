@@ -10,14 +10,25 @@ class MainData {
   #finlists = [];
 
 
+  // метод поиска по массивам данных
+  findData(arr, searchItem) {
+
+    const check = arr.find(function (item) {
+      return item.userName === searchItem
+    })
+
+    return check
+
+  }
+
+
   // метод валидации данных при регистрации нового юзера
   validationNewSignUp(inputName, inputPass, inputRepeatPass) {
 
-    // проверка на занятость имени
-    const check = this.#users.find(function (item) {
-      return item.userName === inputName
-    })
+    // проверяем занаятость имени
+    const check = this.findData(this.#users, inputName)
 
+    // услолвия при различных сценариях валидации
     if (check) {
       // проверка на занятость имени, если занято возвращаем 0 
       return 0
@@ -49,10 +60,8 @@ class MainData {
   // метод логина (проверка имени и пасса при входе)
   _login(name, password) {
 
-    // проверка на занятость имени (если он есть то вернет его, а если нет то undefined)
-    const check = this.#users.find(function (item) {
-      return item.userName === name
-    })
+    // проверка на наличие юзера с таким имени (если он есть то вернет его, а если нет то undefined)
+    const check = this.findData(this.#users, name)
 
     // условие: если юзер существует и его пароль равен паролю передаваемому в качестве аргумента, то вход, иначе нотификашка об ошибке
     if (check && check.userPassword === +password) {
@@ -121,14 +130,27 @@ class MainData {
 
 
   // метод добавления нового movements в финлист
-  addNewMovements(finListIndex, movAmount, exRateInp) {
+  addNewMovements(finListIndex, movAmount, exRateInp, manualSetDate) {
 
-    // формирование даты
-    const now = new Date()
-    const day = `${now.getDate()}`.padStart(2, 0)
-    const month = `${now.getMonth() + 1}`.padStart(2, '0') // так как месяц стартует с нуля, то прибалвяем единицы
-    const year = now.getFullYear()
-    const dateCur = `${day}.${month}.${year}`
+
+    // пока нет бека даты проставляю вручную, если есть manualSetDate, то он ставится, если нет, то автоматически формируется текущая дата
+    let dateCur
+
+    if (manualSetDate) {
+
+      dateCur = manualSetDate
+
+    } else {
+
+      // формирование даты
+      const now = new Date()
+      const day = `${now.getDate()}`.padStart(2, 0)
+      const month = `${now.getMonth() + 1}`.padStart(2, '0') // так как месяц стартует с нуля, то прибалвяем единицы
+      const year = now.getFullYear()
+      dateCur = `${day}.${month}.${year}`
+    }
+
+
 
 
     // если мы добавляем, то есть плюсовое значение количества
@@ -237,10 +259,22 @@ appData.addNewUser(newUser2)
 
 appData.addNewFinlist('Накопления', 'rub')
 appData.addNewFinlist('Доллары', 'usd')
-appData.addNewMovements(0, 30000)
-appData.addNewMovements(0, 10000)
+appData.addNewFinlist('Инвестиции', 'rub')
 
-appData.addNewMovements(1, 262, 70)
+appData.addNewMovements(0, 30000)
+
+appData.addNewMovements(1, 262, 71, '27.08.2020')
+
+appData.addNewMovements(2, 27700, 0, '08.09.2020')
+appData.addNewMovements(2, 30500, 0, '10.07.2020')
+appData.addNewMovements(2, 12864, 0, '25.03.2020')
+appData.addNewMovements(2, 4260, 0, '27.02.2020')
+appData.addNewMovements(2, 19730, 0, '25.02.2020')
+appData.addNewMovements(2, 2740, 0, '10.01.2020')
+appData.addNewMovements(2, 5675, 0, '10.01.2020')
+appData.addNewMovements(2, 2732, 0, '10.01.2020')
+
+
 
 
 

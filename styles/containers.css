@@ -26,6 +26,7 @@
 
 /* контейнер главной страницы */
 .container-mainPage {
+  position: relative;
   display: none;
 }
 

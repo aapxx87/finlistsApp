@@ -99,3 +99,6 @@ const modalMovementsPlusBtn = document.querySelector('.container-modal-add-movem
 // - Welcome title
 const welcomeTitle = document.querySelector('.welcome-title')
 
+// - Logout box
+const logout = document.querySelector('.logout-box')
+

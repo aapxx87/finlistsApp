@@ -14,10 +14,27 @@ class MainData {
     this.currentUser
     this.indexFinList
     this.finListNumberInArr()
+    this.logout()
   }
 
   addWelcomeTitleName() {
     welcomeTitle.textContent = `Welcome, ${this.currentUser}!`
+  }
+
+
+  logout() {
+
+    logout.addEventListener('click', function () {
+
+      loginSignUpContainer.style.display = 'block'
+      mainPageContainer.style.display = 'none'
+
+      this.currentUser = ''
+
+      containerFinLists.innerHTML = ''
+
+    })
+
   }
 
 

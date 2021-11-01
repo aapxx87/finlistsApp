@@ -1,6 +1,4 @@
 
-
-
 // функция добавления нового финлиста
 btnAddNewFinList.addEventListener('click', function () {
 
@@ -10,8 +8,6 @@ btnAddNewFinList.addEventListener('click', function () {
   } else {
     console.log("имя занято");
   }
-
-
 
   containerFinLists.innerHTML = ''
 

@@ -14,15 +14,4 @@ btnAddNewMov.addEventListener('click', function () {
   appData.displayFinlists()
 
 
-  console.log('Add new mov');
-
-  console.log(appData.getAllFinlists());
-
-  console.log(appData);
-
-
-
-
-
-
 })

@@ -95,3 +95,7 @@ const inputMovFLexrate = document.querySelector('.input-add-mov-exrate')
 // - Modal Window Add Movements on Plus Btn
 const modalMovementsPlusBtn = document.querySelector('.container-modal-add-movements-PlusBtn')
 
+
+// - Welcome title
+const welcomeTitle = document.querySelector('.welcome-title')
+

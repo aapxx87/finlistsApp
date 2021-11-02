@@ -265,31 +265,27 @@ class MainData {
 
     const currentUser = this.currentUser
 
+    // фильтр финлистов, которые созданы юзером
     const currentUserFinlists = allFinLists.filter(function (item) {
       return item.owner === currentUser
     })
 
 
-    // поиск шареных финлистов
+    // поиск шареных финлистов для данного юзера
     const arr = []
 
     const shareFinlists = allFinLists.filter(function (item) {
 
       item.participance.forEach(function (el) {
         if (el === currentUser) {
-
           arr.push(item)
         }
       })
-      // return item.participance[0] === currentUser
     })
 
-    console.log(arr);
-
-
+    // объединяем финлисты юзера (owner) и шареные 
     const finalLists = [...currentUserFinlists, ...arr]
 
-    console.log(finalLists);
 
 
 
@@ -453,6 +449,7 @@ class MainData {
 
   }
 
+
   // метод раскрытия детализации финлиста
   finListDetalisationVisible() {
 
@@ -471,6 +468,7 @@ class MainData {
   }
 
 
+  // определние номера элемента финлиста при клике по кнопке + добавления Movements  
   finListNumberInArr() {
 
     // let indexFinList = 0
@@ -511,6 +509,35 @@ class MainData {
   }
 
 
+  // добавление participance
+  addParticipance(finListname, ownerName, partName) {
+
+    const finListCheck = this.validationUniqueNewFinListName(finListname)
+
+    if (finListCheck.owner === ownerName) {
+      finListCheck.participance.push(partName)
+    }
+
+    // console.log(finListCheck);
+
+  }
+
+
+  // удаление participance
+  removeParticipance(finListname, ownerName, partName) {
+
+    const finListCheck = this.validationUniqueNewFinListName(finListname)
+
+    if (finListCheck.owner === ownerName) {
+      const idx = finListCheck.participance.indexOf(partName)
+      finListCheck.participance.splice(idx, 1)
+    }
+
+    // console.log(finListCheck);
+
+  }
+
+
 
 }
 
@@ -532,8 +559,16 @@ appData.addNewMovements(0, 30000)
 appData.addNewMovements(1, 262, 70)
 
 
-// console.log(appData.getAllUsers());
 console.log(appData.getAllFinlists());
+
+
+appData.addParticipance('Накопления', 'Tolik', 'ira')
+appData.addParticipance('Доллары', 'Tolik', 'ira')
+appData.addParticipance('Инвестиции', 'Katya', 'ira')
+
+
+appData.removeParticipance('Доллары', 'Tolik', 'Katya')
+appData.removeParticipance('Накопления', 'Tolik', 'Katya')
 
 
 

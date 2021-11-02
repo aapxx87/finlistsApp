@@ -31,5 +31,4 @@ btnRemoveFinList.addEventListener('click', function () {
 
   appData.displayFinlists()
 
-
 })

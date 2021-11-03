@@ -550,9 +550,8 @@ const appData = new MainData()
 
 
 appData.addNewFinlist('Накопления', 'rub', 'Tolik', 'Katya')
-appData.addNewFinlist('Доллары', 'usd', 'Tolik', 'Katya')
-appData.addNewFinlist('Инвестиции', 'rub', 'Katya', 'q')
-appData.addNewFinlist('Пенсия', 'rub', 'Katya', 'q')
+appData.addNewFinlist('Доллары', 'usd', 'Tolik', 'q')
+appData.addNewFinlist('Инвестиции', 'rub', 'Tolik', 'q')
 appData.addNewMovements(0, 26300)
 appData.addNewMovements(0, 30000)
 
@@ -562,13 +561,12 @@ appData.addNewMovements(1, 262, 70)
 console.log(appData.getAllFinlists());
 
 
-appData.addParticipance('Накопления', 'Tolik', 'ira')
-appData.addParticipance('Доллары', 'Tolik', 'ira')
-appData.addParticipance('Инвестиции', 'Katya', 'ira')
+appData.addParticipance('Доллары', 'Tolik', 'Katya')
 
 
-appData.removeParticipance('Доллары', 'Tolik', 'Katya')
-appData.removeParticipance('Накопления', 'Tolik', 'Katya')
+
+// appData.removeParticipance('Доллары', 'Tolik', 'Katya')
+// appData.removeParticipance('Накопления', 'Tolik', 'Katya')
 
 
 

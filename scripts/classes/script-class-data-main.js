@@ -11,7 +11,7 @@ class MainData {
 
 
   constructor() {
-    this.currentUser
+    this.currentUser = 'Tolik'
     this.indexFinList
     this.finListNumberInArr()
     this.logout()
@@ -111,18 +111,18 @@ class MainData {
 
 
   // метод добавления нового финлиста
-  addNewFinlist(name, currency, owner, friends) {
+  addNewFinlist(name, currency, owner) {
 
     // пока нет БД для ручной предустановки owner
     let newFinlistObj
 
-    if (owner && friends) {
+    if (owner) {
 
       newFinlistObj = {
         finlistName: name,
         finlistCurrency: currency,
         owner: owner,
-        participance: [friends],
+        participance: [],
         finlistMovements: []
       }
 
@@ -143,18 +143,9 @@ class MainData {
   }
 
   // метод удаления финлиста
-  removeFinList(name) {
+  removeFinList() {
 
-    let index
-
-    const checkName = this.#finlists.find(function (el, idx) {
-      index = idx
-      return el.finlistName === name
-    })
-
-    if (checkName) {
-      this.#finlists.splice(index, 1)
-    }
+    this.#finlists.splice(this.indexFinList, 1)
 
   }
 
@@ -172,14 +163,23 @@ class MainData {
 
 
   // метод добавления нового movements в финлист
-  addNewMovements(finListIndex, movAmount, exRateInp) {
+  addNewMovements(finListIndex, movAmount, exRateInp, date) {
 
-    // формирование даты
-    const now = new Date()
-    const day = `${now.getDate()}`.padStart(2, 0)
-    const month = `${now.getMonth() + 1}`.padStart(2, '0') // так как месяц стартует с нуля, то прибалвяем единицы
-    const year = now.getFullYear()
-    const dateCur = `${day}.${month}.${year}`
+    // Пока нет БД, даты добалвления Mov ставим ручками
+    // если аргумент указан, то он тащится из него, если нет, то дата ставится текущая
+    let dateCur
+
+    if (date) {
+      dateCur = date
+    } else {
+      // формирование даты
+      const now = new Date()
+      const day = `${now.getDate()}`.padStart(2, 0)
+      const month = `${now.getMonth() + 1}`.padStart(2, '0') // так как месяц стартует с нуля, то прибалвяем единицы
+      const year = now.getFullYear()
+      dateCur = `${day}.${month}.${year}`
+    }
+
 
 
 
@@ -305,7 +305,6 @@ class MainData {
 
         // формируем HTML с движениями из каждого финлиста (тут еще не вставлен тег table, так как гоним циклом и table будет много раз)
         let htmlMov = ''
-        let movTotal = 0
 
 
         // сортируем по дате исключительно массив movements
@@ -326,9 +325,14 @@ class MainData {
             <td class="col">${itemMov.movAmount}</td>
           </tr>
         `
-          // суммируем все движения в единое число - Total
-          movTotal = movTotal + itemMov.movAmount
+
         })
+
+
+        // считаем сумму всех movements в финлисте -> далее вставляем в HTML в блок Total
+        const sumAllMovements = item.finlistMovements.reduce(function (acc, cur) {
+          return acc + cur.movAmount
+        }, 0)
 
 
 
@@ -337,7 +341,7 @@ class MainData {
         <div class="finlist-header">
             <div class="toggle-click-open">
             <h3 class="finList-title">${item.finlistName} <span>(${item.finlistCurrency})</span></h3>
-            <h3 class="finList-total">Total: ${movTotal} </h3>
+            <h3 class="finList-total">Total: ${sumAllMovements} </h3>
             </div>
             <p class="finList-addNewMov ${index}">+</p>
         </div>
@@ -374,7 +378,6 @@ class MainData {
 
         // формируем HTML с движениями из каждого финлиста (тут еще не вставлен тег table, так как гоним циклом и table будет много раз)
         let htmlMov = ''
-        let movTotal = 0
 
 
         // сортируем по дате исключительно массив movements
@@ -396,9 +399,13 @@ class MainData {
               <td class="col">${itemMov.exRate}</td>
             </tr>
           `
-          // суммируем все движения в единое число - Total
-          movTotal = movTotal + itemMov.movAmount
         })
+
+
+        // считаем сумму всех movements в финлисте -> далее вставляем в HTML в блок Total
+        const sumAllMovements = item.finlistMovements.reduce(function (acc, cur) {
+          return acc + cur.movAmount
+        }, 0)
 
 
         // формируем заголовок с Title каждого финлиста
@@ -406,7 +413,7 @@ class MainData {
           <div class="finlist-header">
               <div class="toggle-click-open">
               <h3 class="finList-title">${item.finlistName} <span>(${item.finlistCurrency})</span></h3>
-              <h3 class="finList-total">Total: ${movTotal} </h3>
+              <h3 class="finList-total">Total: ${sumAllMovements} </h3>
               </div>
               <p class="finList-addNewMov ${index}">+</p>
           </div>
@@ -471,11 +478,7 @@ class MainData {
   // определние номера элемента финлиста при клике по кнопке + добавления Movements  
   finListNumberInArr() {
 
-    // let indexFinList = 0
-
     let idx
-
-
 
     const plusBtn = document.querySelectorAll('.finList-addNewMov')
 
@@ -484,7 +487,9 @@ class MainData {
 
         idx = el.classList[1];
 
-        modalMovements.style.display = 'block'
+        cntOperationsFL.style.display = 'block'
+
+        // modalMovements.style.display = 'block'
 
         // проверяем какая валюта финлиста6 чтобы при необходимости отобрать инпут для курса обмена
         if (appData.finListCurrencyCheck(idx) === 1) {
@@ -496,8 +501,6 @@ class MainData {
         overlay.style.display = 'block'
 
         inputMovFLamount.focus()
-
-        console.log(idx);
 
         appData.indexFinList = idx
 
@@ -517,6 +520,12 @@ class MainData {
     if (finListCheck.owner === ownerName) {
       finListCheck.participance.push(partName)
     }
+
+    // новый код
+    this.#finlists[this.indexFinList].participance.push(partName)
+
+
+
 
     // console.log(finListCheck);
 
@@ -548,25 +557,41 @@ const appData = new MainData()
 
 
 
+// Предустанавливаем Финлисты под Owner Tolik
+appData.addNewFinlist('Накопления', 'rub', 'Tolik')
+appData.addNewFinlist('Доллары', 'usd', 'Tolik')
+appData.addNewFinlist('Инвестиции', 'rub', 'Tolik')
+appData.addNewFinlist('Дом', 'rub', 'Katya')
 
-appData.addNewFinlist('Накопления', 'rub', 'Tolik', 'Katya')
-appData.addNewFinlist('Доллары', 'usd', 'Tolik', 'q')
-appData.addNewFinlist('Инвестиции', 'rub', 'Tolik', 'q')
-appData.addNewMovements(0, 26300)
-appData.addNewMovements(0, 30000)
+
+// Предустанавливаем Mov в Финлист Накопления
+appData.addNewMovements(0, 26300, '', '01.01.2021')
+appData.addNewMovements(0, 30000, '', '01.02.2021')
+
+
+// Предустанавливаем Mov в Финлист Инвестиции
+appData.addNewMovements(2, 11508, '', '03.11.21')
+appData.addNewMovements(2, 30500, '', '10.07.20')
+appData.addNewMovements(2, 12864, '', '25.03.20')
+appData.addNewMovements(2, 4260, '', '27.02.20')
+appData.addNewMovements(2, 19730, '', '25.02.20')
+appData.addNewMovements(2, 2740, '', '10.01.20')
+appData.addNewMovements(2, 5675, '', '10.01.20')
+appData.addNewMovements(2, 2732, '', '10.01.20')
+
+
 
 appData.addNewMovements(1, 262, 70)
 
 
+console.log('----- All Finlists in base');
 console.log(appData.getAllFinlists());
 
 
-appData.addParticipance('Доллары', 'Tolik', 'Katya')
+// appData.addParticipance('Доллары', 'Tolik', 'Katya')
 
 
 
-// appData.removeParticipance('Доллары', 'Tolik', 'Katya')
-// appData.removeParticipance('Накопления', 'Tolik', 'Katya')
 
 
 

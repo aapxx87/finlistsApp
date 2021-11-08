@@ -73,14 +73,28 @@ const btnRemoveFinList = document.querySelector('.btn-removeFinList')
 // -- Input
 const inputFinListName = document.querySelector('.input-add-finlist-name')
 const inputFinListCur = document.querySelector('.input-add-finlist-cur')
-const inputFinListNameRemove = document.querySelector('.input-remove-finlist-name')
+// const inputFinListNameRemove = document.querySelector('.input-remove-finlist-name')
 
 // - Overlay
 const overlay = document.querySelector('.container-overlay')
 
 
-// ! Modal Window Add Movements
-const modalMovements = document.querySelector('.container-modal-add-movements')
+// ! Container operations with FinLists
+const cntOperationsFL = document.querySelector('.container-operation-with-finlists')
+
+// - Бокс с вариантами действий 
+const boxOperations = document.querySelector('.box-operations-list')
+const boxAddMov = document.querySelector('.box-operations-add-movements')
+const boxShareFL = document.querySelector('.box-operations-share')
+
+
+// -- Action links
+const linkAddMov = document.querySelector('.btn-add-movements')
+const linkShareFL = document.querySelector('.btn-share-fl')
+
+
+
+// ! Box Add Movements
 
 // -- Buttons
 const btnModalMov = document.querySelector('.btn-addFinMove')

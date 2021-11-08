@@ -96,8 +96,8 @@
       <!-- Контейнер с ФинЛистами -->
       <div class="container-finList">
 
-        <!-- Компонент - финлист - вставляется через JS
-        <div class="comp-finList-box">
+        <!-- Компонент - финлист - вставляется через JS -->
+        <!-- <div class="comp-finList-box">
           <div class="finlist-header">
             <div class="toggle-click-open">
               <h3 class="finList-title">Машина <span>(rub)</span> </h3>
@@ -127,49 +127,53 @@
           </table>
         </div>
 
-        <div class="comp-finList-box">
-          <div class="finlist-header">
-            <div class="toggle-click-open">
-              <h3 class="finList-title">Квартира <span>(rub)</span> </h3>
-              <h3 class="finList-total">Total: 70000</h3>
-            </div>
-            <p class="finList-addNewMov">+</p>
+      </div> -->
+
+
+      </div>
+
+      <!-- контейнер действий над финлистами -->
+      <div class="container-operation-with-finlists">
+
+        <!-- Бокс с выбором варинатов действий -->
+        <div class="box-operations-list">
+
+          <div class="operation-add-movements">
+            <p class="btn-add-movements">Add Movements -></p>
           </div>
 
+          <div class="operation-share-setting">
+            <p class="btn-share-fl">Share Setting -></p>
+          </div>
 
-          <table class="finlist-table">
-            <tr>
-              <td class="col table-header">Date</td>
-              <td class="col table-header">Amount</td>
-            </tr>
-            <tr>
-              <td class="col">01.03.2021</td>
-              <td class="col">4000</td>
-            </tr>
-            <tr>
-              <td class="col">01.02.2021</td>
-              <td class="col">6000</td>
-            </tr>
-            <tr>
-              <td class="col">01.01.2021</td>
-              <td class="col">5000</td>
-            </tr>
-          </table>
-        </div> -->
+          <!-- кнопка удаления финлиста -->
+          <div class="operation-delete-fl">
+            <a href="#" class="btn btn-removeFinList">Rem FL</a>
+          </div>
+
+        </div>
+
+
+        <!-- Бокс операции добавления Movements -->
+        <div class="box-operations-add-movements">
+
+          <input type="number" class="input-fl-mov input-add-mov-amount" placeholder="Amount">
+          <input type="number" class="input-fl-mov input-add-mov-exrate" placeholder="Exchange rate">
+          <a href="#" class="btn btn-addMov">Add</a>
+
+        </div>
+
+        <!-- Бокс операции шаринга финлиста -->
+        <div class="box-operations-share">
+
+        </div>
+
+
 
       </div>
 
 
-      <!-- модалка добавления movements по кнопке Plus -->
-      <div class="container-modal-add-movements">
-        <input type="number" class="input-fl-mov input-add-mov-amount" placeholder="Amount">
-        <input type="number" class="input-fl-mov input-add-mov-exrate" placeholder="Exchange rate">
-        <a href="#" class="btn btn-addMov">Add</a>
-      </div>
-
-
-
-      <!-- модалка добавления финлистов по круглой кнопке +/-  -->
+      <!-- модалка добавления финлистов по круглой кнопке +  -->
       <div class="container-modal-add-finlist">
 
         <!-- добавление ФинЛиста -->
@@ -177,10 +181,6 @@
         <input type="text" class="input-fl-mov input-add-finlist-cur" placeholder="Currency">
 
         <a href="#" class="btn btn-addFinList">Add FL</a>
-
-        <!-- удаление ФинЛиста -->
-        <input type="text" class=" input-fl-mov input-remove-finlist-name" placeholder="Name">
-        <a href="#" class="btn btn-removeFinList">Rem FL</a>
 
       </div>
 
@@ -191,37 +191,29 @@
 
       <!-- кнопка добавления ФинЛистов-->
       <div class="container-btns-add-finlists">
-        <a href="#" class="btn btn-addModalFinList">+/-</a>
+        <a href="#" class="btn btn-addModalFinList">+</a>
       </div>
 
 
 
-    </div>
 
 
 
+      <!-- селекторы -->
+      <script src="scripts/selectors.js"></script>
 
 
+      <!-- основные ООП скрипты -->
+      <script src="scripts/classes/script-class-data-main.js"></script>
+      <script src="scripts/classes/script-class-user.js"></script>
+      <script src="scripts/classes/script-class-app.js"></script>
 
-    <!-- селекторы -->
-    <script src="scripts/selectors.js"></script>
-
-
-    <!-- основные ООП скрипты -->
-    <script src="scripts/classes/script-class-data-main.js"></script>
-    <script src="scripts/classes/script-class-user.js"></script>
-    <script src="scripts/classes/script-class-app.js"></script>
-
-    <!-- декоративные скрипты для страниц SignUp и Login -->
-    <script src="scripts/decorate-reg-login.js"></script>
+      <!-- декоративные скрипты для страниц SignUp и Login -->
+      <script src="scripts/decorate-reg-login.js"></script>
 
 
-    <!-- скрипты для фукнционала финлиста -->
-    <script src="scripts/fin-list.js"></script>
-
-
-    <!-- скрипты для добавления удаления movements -->
-    <script src="scripts/add-rem-movements.js"></script>
+      <!-- скрипты операций с финлистами -->
+      <script src="scripts/finlist-operations.js"></script>
 
 </body>
 

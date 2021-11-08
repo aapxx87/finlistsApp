@@ -78,16 +78,33 @@
   display: none;
 }
 
-/* контейнер модалки добавления movements по кнопке Add Mov */
-.container-modal-add-movements {
+
+/* контейнер выбора действий над финлистами */
+.container-operation-with-finlists {
   width: 60%;
-  padding: 20px;
+  padding: 30px 20px;
   background: #2C2E52;
   position: absolute;
   top: 120px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
+  z-index: 10;
+  border: 1px solid #fff;
   display: none;
+}
+
+
+/* контейнер модалки добавления movements по кнопке Add Mov */
+.container-modal-add-movements {
+  width: 100%;
+  padding: 20px;
+  background: #2C2E52;
+  /* position: absolute;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%); */
+  text-align: center;
+  /* display: none; */
   z-index: 10;
 }

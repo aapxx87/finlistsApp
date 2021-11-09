@@ -97,7 +97,7 @@
       <div class="container-finList">
 
         <!-- Компонент - финлист - вставляется через JS -->
-        <!-- <div class="comp-finList-box">
+        <div class="comp-finList-box">
           <div class="finlist-header">
             <div class="toggle-click-open">
               <h3 class="finList-title">Машина <span>(rub)</span>
@@ -110,125 +110,132 @@
             <p class="finList-addNewMov">+</p>
           </div>
 
+          <div class="finlist-table">
 
-          <table class="finlist-table">
-            <tr>
-              <td class="col table-header">Date</td>
-              <td class="col table-header">Amount</td>
-            </tr>
-            <tr>
-              <td class="col">01.03.2021</td>
-              <td class="col">4000</td>
-            </tr>
-            <tr>
-              <td class="col">01.02.2021</td>
-              <td class="col">6000</td>
-            </tr>
-            <tr>
-              <td class="col">01.01.2021</td>
-              <td class="col">5000</td>
-            </tr>
-          </table>
-        </div>
+            <h3 class="table-title">Activity</h3>
 
-      </div> -->
+            <table class="table-draft">
 
+              <!-- <tr>
+                <td class="col table-header">Date</td>
+                <td class="col table-header">Amount</td>
+              </tr> -->
+              <tr>
+                <td class="col">01.03.2021</td>
+                <td class="col">4000</td>
+              </tr>
+              <tr>
+                <td class="col">01.02.2021</td>
+                <td class="col">6000</td>
+              </tr>
+              <tr>
+                <td class="col">01.01.2021</td>
+                <td class="col">5000</td>
+              </tr>
+            </table>
 
-      </div>
-
-      <!-- контейнер действий над финлистами -->
-      <div class="container-operation-with-finlists">
-
-        <!-- Бокс с выбором варинатов действий -->
-        <div class="box-operations-list">
-
-          <div class="operation-add-movements">
-            <p class="btn-add-movements">Add Movements &#8594</p>
-          </div>
-
-          <div class="operation-share-setting">
-            <p class="btn-share-fl">Share Setting &#8594</p>
-          </div>
-
-          <!-- кнопка удаления финлиста -->
-          <div class="operation-delete-fl">
-            <a href="#" class="btn btn-removeFinList">Rem FL</a>
           </div>
 
         </div>
 
+      </div>
 
-        <!-- Бокс операции добавления Movements -->
-        <div class="box-operations-add-movements">
 
-          <div class="btn-box-oper-back back-from-add-mov">&#8592</div>
+    </div>
 
-          <input type="number" class="input-fl-mov input-add-mov-amount" placeholder="Amount">
-          <input type="number" class="input-fl-mov input-add-mov-exrate" placeholder="Exchange rate">
-          <a href="#" class="btn btn-addMov">Add</a>
+    <!-- контейнер действий над финлистами -->
+    <div class="container-operation-with-finlists">
 
+      <!-- Бокс с выбором варинатов действий -->
+      <div class="box-operations-list">
+
+        <div class="operation-add-movements">
+          <p class="btn-add-movements">Add Movements &#8594</p>
         </div>
 
-        <!-- Бокс операции шаринга финлиста -->
-        <div class="box-operations-share">
-
-          <div class="btn-box-oper-back back-from-sharing">&#8592</div>
-
-          <input type="text" class="input-invite-member" placeholder="Member name">
-          <a href="#" class="btn btn-invite">Invite</a>
-
-          <input type="text" class="input-delete-member" placeholder="Member name">
-          <a href="#" class="btn btn-delete-member">Delete</a>
-
+        <div class="operation-share-setting">
+          <p class="btn-share-fl">Share Setting &#8594</p>
         </div>
 
-
-
-      </div>
-
-
-      <!-- модалка добавления финлистов по круглой кнопке +  -->
-      <div class="container-modal-add-finlist">
-
-        <!-- добавление ФинЛиста -->
-        <input type="text" class="input-fl-mov input-add-finlist-name" placeholder="Name">
-        <input type="text" class="input-fl-mov input-add-finlist-cur" placeholder="Currency">
-
-        <a href="#" class="btn btn-addFinList">Add FL</a>
+        <!-- кнопка удаления финлиста -->
+        <div class="operation-delete-fl">
+          <a href="#" class="btn btn-removeFinList">Rem FL</a>
+        </div>
 
       </div>
 
 
-      <!-- overlay -->
-      <div class="container-overlay"></div>
+      <!-- Бокс операции добавления Movements -->
+      <div class="box-operations-add-movements">
 
+        <div class="btn-box-oper-back back-from-add-mov">&#8592</div>
 
+        <input type="number" class="input-fl-mov input-add-mov-amount" placeholder="Amount">
+        <input type="number" class="input-fl-mov input-add-mov-exrate" placeholder="Exchange rate">
+        <a href="#" class="btn btn-addMov">Add</a>
 
-      <!-- кнопка добавления ФинЛистов-->
-      <div class="container-btns-add-finlists">
-        <a href="#" class="btn btn-addModalFinList">+</a>
+      </div>
+
+      <!-- Бокс операции шаринга финлиста -->
+      <div class="box-operations-share">
+
+        <div class="btn-box-oper-back back-from-sharing">&#8592</div>
+
+        <input type="text" class="input-invite-member" placeholder="Member name">
+        <a href="#" class="btn btn-invite">Invite</a>
+
+        <input type="text" class="input-delete-member" placeholder="Member name">
+        <a href="#" class="btn btn-delete-member">Delete</a>
+
       </div>
 
 
 
+    </div>
+
+
+    <!-- модалка добавления финлистов по круглой кнопке +  -->
+    <div class="container-modal-add-finlist">
+
+      <!-- добавление ФинЛиста -->
+      <input type="text" class="input-fl-mov input-add-finlist-name" placeholder="Name">
+      <input type="text" class="input-fl-mov input-add-finlist-cur" placeholder="Currency">
+
+      <a href="#" class="btn btn-addFinList">Add FL</a>
+
+    </div>
+
+
+    <!-- overlay -->
+    <div class="container-overlay"></div>
 
 
 
-      <!-- селекторы -->
-      <script src="scripts/selectors.js"></script>
+    <!-- кнопка добавления ФинЛистов-->
+    <div class="container-btns-add-finlists">
+      <a href="#" class="btn btn-addModalFinList">+</a>
+    </div>
 
 
-      <!-- основные ООП скрипты -->
-      <script src="scripts/classes/script-class-data-main.js"></script>
-      <script src="scripts/classes/script-class-user.js"></script>
-      <script src="scripts/classes/script-class-app.js"></script>
-
-      <!-- декоративные скрипты для страниц SignUp и Login -->
-      <script src="scripts/decorate-reg-login.js"></script>
 
 
-      <!-- скрипты операций с финлистами -->
-      <script src="scripts/finlist-operations.js"></script>
+
+
+    <!-- селекторы -->
+    <script src="scripts/selectors.js"></script>
+
+
+    <!-- основные ООП скрипты -->
+    <script src="scripts/classes/script-class-data-main.js"></script>
+    <script src="scripts/classes/script-class-user.js"></script>
+    <script src="scripts/classes/script-class-app.js"></script>
+
+    <!-- декоративные скрипты для страниц SignUp и Login -->
+    <script src="scripts/decorate-reg-login.js"></script>
+
+
+    <!-- скрипты операций с финлистами -->
+    <script src="scripts/finlist-operations.js"></script>
 
 </body>
 

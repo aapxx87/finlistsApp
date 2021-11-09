@@ -11,7 +11,7 @@ class MainData {
 
 
   constructor() {
-    this.currentUser = 'Tolik'
+    this.currentUser
     this.indexFinList
     this.finListNumberInArr()
     this.logout()
@@ -513,36 +513,24 @@ class MainData {
 
 
   // добавление participance
-  addParticipance(finListname, ownerName, partName) {
+  addParticipance(partName) {
 
-    const finListCheck = this.validationUniqueNewFinListName(finListname)
-
-    if (finListCheck.owner === ownerName) {
-      finListCheck.participance.push(partName)
-    }
-
-    // новый код
     this.#finlists[this.indexFinList].participance.push(partName)
 
-
-
-
-    // console.log(finListCheck);
+    console.log('---- Участник Добавлен');
+    console.log(this.#finlists);
 
   }
 
 
   // удаление participance
-  removeParticipance(finListname, ownerName, partName) {
+  removeParticipance(partName) {
 
-    const finListCheck = this.validationUniqueNewFinListName(finListname)
+    const idx = this.#finlists[this.indexFinList].participance.indexOf(partName)
+    this.#finlists[this.indexFinList].participance.splice(idx, 1)
 
-    if (finListCheck.owner === ownerName) {
-      const idx = finListCheck.participance.indexOf(partName)
-      finListCheck.participance.splice(idx, 1)
-    }
-
-    // console.log(finListCheck);
+    console.log('---- Участник Удален');
+    console.log(this.#finlists);
 
   }
 

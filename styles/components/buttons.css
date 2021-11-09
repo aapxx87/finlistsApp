@@ -7,6 +7,7 @@
   border-radius: 50px;
   color: #fff;
   text-decoration: none;
+  display: inline-block;
 }
 
 .btn-addModalFinList {
@@ -21,13 +22,18 @@
   text-decoration: none;
 }
 
-.btn-addFinList {
+.btn-addFinList,
+.btn-invite {
   background-color: #6d9656;
 }
 
-.btn-removeFinList {
-  display: inline-block;
+.btn-invite,
+.btn-delete-member {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
+
+
 
 .container-modal-add-movements a, 
 .container-modal-add-finlist a {

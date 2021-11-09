@@ -95,7 +95,6 @@ const linkShareFL = document.querySelector('.btn-share-fl')
 
 
 // ! Box Add Movements
-
 // -- Buttons
 const btnModalMov = document.querySelector('.btn-addFinMove')
 const btnAddNewMov = document.querySelector('.btn-addMov')
@@ -106,13 +105,31 @@ const btnAddNewMovPlus = document.querySelector('.btn-addMov-plus')
 const inputMovFLamount = document.querySelector('.input-add-mov-amount')
 const inputMovFLexrate = document.querySelector('.input-add-mov-exrate')
 
-// - Modal Window Add Movements on Plus Btn
+
+
+// ! Box Share Settings
+// - Box
+const boxSharingSetting = document.querySelector('.box-operations-share')
+
+//  - Inputs
+const inputInviteMember = document.querySelector('.input-invite-member')
+const inputDeleteMember = document.querySelector('.input-delete-member')
+
+// - Buttons
+const btnInviteMember = document.querySelector('.btn-invite')
+const btnDeleteMember = document.querySelector('.btn-delete-member')
+
+
+
+
+
+// Modal Window Add Movements on Plus Btn
 const modalMovementsPlusBtn = document.querySelector('.container-modal-add-movements-PlusBtn')
 
 
-// - Welcome title
+// Welcome title
 const welcomeTitle = document.querySelector('.welcome-title')
 
-// - Logout box
+// Logout box
 const logout = document.querySelector('.logout-box')
 

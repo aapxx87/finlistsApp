@@ -40,6 +40,8 @@ btnAddNewFinList.addEventListener('click', function () {
 })
 
 
+// ! Операции с финлистами
+
 // функция удаления финлиста в контейнера с операциями
 btnRemoveFinList.addEventListener('click', function () {
   appData.removeFinList()
@@ -52,7 +54,6 @@ btnRemoveFinList.addEventListener('click', function () {
   overlay.style.display = 'none'
 
 })
-
 
 
 // переход к добавлению mov из action для финлистов
@@ -91,3 +92,35 @@ linkShareFL.addEventListener('click', function () {
   boxShareFL.style.display = 'block'
 
 })
+
+
+// Инвайт в финлист нового мембера
+btnInviteMember.addEventListener('click', function () {
+
+  appData.addParticipance(inputInviteMember.value)
+
+  overlay.style.display = 'none'
+  boxSharingSetting.style.display = 'none'
+  boxOperations.style.display = 'block'
+  cntOperationsFL.style.display = 'none'
+
+})
+
+
+
+
+// Удаления мембера из доступа к финлисту
+btnDeleteMember.addEventListener('click', function () {
+
+  appData.removeParticipance(inputInviteMember.value)
+
+  overlay.style.display = 'none'
+  boxSharingSetting.style.display = 'none'
+  boxOperations.style.display = 'block'
+  cntOperationsFL.style.display = 'none'
+
+
+
+})
+
+

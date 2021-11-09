@@ -127,6 +127,9 @@ class App {
 
     inputMovFLamount.value = ''
     inputMovFLexrate.value = ''
+
+    inputInviteMember.value = ''
+    inputDeleteMember.value = ''
   }
 
 

@@ -336,14 +336,37 @@ class MainData {
 
 
 
+        // переменная куда записываем html код с пошаренными людьми
+        let shareHTMLnumber = ''
+
+        // проверяем пошарен ли финлист и если да то добавляем отображение этого с количеством участников
+        // чтобы число пошаренных юзеров отображалось только у овнера, сравниваем овнера финлиста и текущего, если не совпадают, то кол-во пошаренных не отображается. 
+        if (appData.currentUser === item.owner && item.participance.length > 0) {
+          shareHTMLnumber = `<p class="finlist-invites-check">+${item.participance.length}</p>`
+        }
+
+
+        // отображаем для юзера значек того, что лист ему кем-то пошарен
+        let shareListOwner = ''
+
+        if (appData.currentUser != item.owner) {
+          shareListOwner = `<p class="finlist-owner">&#8594 ${item.owner}</p>`
+        }
+
+
+
+
+
+
+
         // формируем заголовок с Title каждого финлиста
         let htmlMovTitle = `
         <div class="finlist-header">
             <div class="toggle-click-open">
-            <h3 class="finList-title">${item.finlistName} <span>(${item.finlistCurrency})</span></h3>
+            <h3 class="finList-title">${item.finlistName} <span>(${item.finlistCurrency})${shareHTMLnumber}${shareListOwner}</span></h3>
             <h3 class="finList-total">Total: ${sumAllMovements} </h3>
             </div>
-            <p class="finList-addNewMov ${index}">+</p>
+            <p class="btn-all-finlist-operations ${index}">+</p>
         </div>
       `
 
@@ -408,14 +431,32 @@ class MainData {
         }, 0)
 
 
+        // переменная куда записываем html код с пошаренными людьми
+        let shareHTMLnumber = ''
+
+        // проверяем пошарен ли финлист и если да то добавляем отображение этого с количеством участников
+        // чтобы число пошаренных юзеров отображалось только у овнера, сравниваем овнера финлиста и текущего, если не совпадают, то кол-во пошаренных не отображается. 
+        if (appData.currentUser === item.owner && item.participance.length > 0) {
+          shareHTMLnumber = `<p class="finlist-invites-check">+${item.participance.length}</p>`
+        }
+
+
+        // отображаем для юзера значек того, что лист ему кем-то пошарен
+        let shareListOwner = ''
+
+        if (appData.currentUser != item.owner) {
+          shareListOwner = `<p class="finlist-owner">&#8594 ${item.owner}</p>`
+        }
+
+
         // формируем заголовок с Title каждого финлиста
         let htmlMovTitle = `
           <div class="finlist-header">
               <div class="toggle-click-open">
-              <h3 class="finList-title">${item.finlistName} <span>(${item.finlistCurrency})</span></h3>
+              <h3 class="finList-title">${item.finlistName} <span>(${item.finlistCurrency})${shareHTMLnumber}${shareListOwner}</span></h3>
               <h3 class="finList-total">Total: ${sumAllMovements} </h3>
               </div>
-              <p class="finList-addNewMov ${index}">+</p>
+              <p class="btn-all-finlist-operations ${index}">+</p>
           </div>
         `
 
@@ -480,7 +521,7 @@ class MainData {
 
     let idx
 
-    const plusBtn = document.querySelectorAll('.finList-addNewMov')
+    const plusBtn = document.querySelectorAll('.btn-all-finlist-operations')
 
     plusBtn.forEach(function (el) {
       el.addEventListener('click', function () {
@@ -520,6 +561,10 @@ class MainData {
     console.log('---- Участник Добавлен');
     console.log(this.#finlists);
 
+    containerFinLists.innerHTML = ''
+
+    this.displayFinlists()
+
   }
 
 
@@ -531,6 +576,10 @@ class MainData {
 
     console.log('---- Участник Удален');
     console.log(this.#finlists);
+
+    containerFinLists.innerHTML = ''
+
+    this.displayFinlists()
 
   }
 
@@ -576,7 +625,6 @@ console.log('----- All Finlists in base');
 console.log(appData.getAllFinlists());
 
 
-// appData.addParticipance('Доллары', 'Tolik', 'Katya')
 
 
 

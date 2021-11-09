@@ -13,12 +13,12 @@
 }
 
 
-.box-operations-add-movements {
-  display: none;
-}
-
-
+.box-operations-add-movements,
 .box-operations-share {
   display: none;
+  position: relative;
 }
+
+
+
 

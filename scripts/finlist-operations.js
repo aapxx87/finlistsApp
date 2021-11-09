@@ -1,4 +1,4 @@
-// Открытие модалки добалвения ФинЛиста
+// Открытие модалки добавления ФинЛиста
 btnModalFinList.addEventListener('click', function () {
   modalFinList.style.display = 'block'
   overlay.style.display = 'block'
@@ -40,9 +40,27 @@ btnAddNewFinList.addEventListener('click', function () {
 })
 
 
-// ! Операции с финлистами
 
-// функция удаления финлиста в контейнера с операциями
+
+// ! Операции с финлистами (общий контейнер с выбором действий)
+
+// - переход к добавлению mov из action для финлистов
+linkAddMov.addEventListener('click', function () {
+
+  boxOperations.style.display = 'none'
+  boxAddMov.style.display = 'block'
+
+})
+
+// - переход к share финлиста из action для финлистов
+linkShareFL.addEventListener('click', function () {
+
+  boxOperations.style.display = 'none'
+  boxShareFL.style.display = 'block'
+
+})
+
+// - удаление финлиста в контейнере с операциями
 btnRemoveFinList.addEventListener('click', function () {
   appData.removeFinList()
 
@@ -55,16 +73,26 @@ btnRemoveFinList.addEventListener('click', function () {
 
 })
 
+// -- Возврат в меню выбора операций из Movements
+backFromMov.addEventListener('click', function () {
 
-// переход к добавлению mov из action для финлистов
-linkAddMov.addEventListener('click', function () {
+  boxAddMov.style.display = 'none'
+  cntOperationsFL.style.display = 'block'
+  boxOperations.style.display = 'block'
 
-  boxOperations.style.display = 'none'
-  boxAddMov.style.display = 'block'
+})
+
+// -- Возврат в меню выбора операций из Sharing setting
+backFromShare.addEventListener('click', function () {
+
+  boxShareFL.style.display = 'none'
+  cntOperationsFL.style.display = 'block'
+  boxOperations.style.display = 'block'
 
 })
 
 
+// --- БОКС добавления movemenets
 
 // Кнопка финального добавления нового mov значения из инпута
 btnAddNewMov.addEventListener('click', function () {
@@ -85,14 +113,7 @@ btnAddNewMov.addEventListener('click', function () {
 })
 
 
-// переход к share финлиста из action для финлистов
-linkShareFL.addEventListener('click', function () {
-
-  boxOperations.style.display = 'none'
-  boxShareFL.style.display = 'block'
-
-})
-
+// --- БОКС sharing setting
 
 // Инвайт в финлист нового мембера
 btnInviteMember.addEventListener('click', function () {
@@ -105,8 +126,6 @@ btnInviteMember.addEventListener('click', function () {
   cntOperationsFL.style.display = 'none'
 
 })
-
-
 
 
 // Удаления мембера из доступа к финлисту

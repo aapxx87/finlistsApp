@@ -41,6 +41,24 @@
 }
 
 
+.btn-all-finlist-operations {
+  margin-top: -4px;
+  margin-left: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(23, 161, 23);
+  cursor: pointer;
+}
+
+
+.btn-box-oper-back {
+  position: absolute;
+  top: -35px;
+  left: 0;
+  font-size: 24px;
+}
+
+
 
 
 

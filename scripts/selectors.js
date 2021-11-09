@@ -9,11 +9,17 @@ const loginContainer = document.querySelector('.container-login')
 const signUpContainer = document.querySelector('.container-signup')
 
 const mainPageContainer = document.querySelector('.container-mainPage')
-
 const containerFinLists = document.querySelector('.container-finList')
+const cntOperationsFL = document.querySelector('.container-operation-with-finlists')
 
-// - Кнопки переключения между Регой и Логином
+
+
+// ** Переключение между Регой и Логином
+
+// - Контейнер
 const logRegSwitchBox = document.querySelector('.reg-mode')
+
+// - Buttons
 const btnLoginMode = document.querySelector('.login-box')
 const btnSignUpMode = document.querySelector('.reg-box')
 
@@ -62,44 +68,49 @@ const boxWarningLogin = document.querySelector('.notification-login')
 
 // ** MAIN PAGE
 
-// ! Modal Window Add New Fin List / Remove Fin List
+// ! Modal Window Add New Fin List
 const modalFinList = document.querySelector('.container-modal-add-finlist')
 
 // -- Buttons
 const btnModalFinList = document.querySelector('.btn-addModalFinList')
 const btnAddNewFinList = document.querySelector('.btn-addFinList')
-const btnRemoveFinList = document.querySelector('.btn-removeFinList')
 
 // -- Input
 const inputFinListName = document.querySelector('.input-add-finlist-name')
 const inputFinListCur = document.querySelector('.input-add-finlist-cur')
-// const inputFinListNameRemove = document.querySelector('.input-remove-finlist-name')
 
-// - Overlay
-const overlay = document.querySelector('.container-overlay')
 
 
 // ! Container operations with FinLists
-const cntOperationsFL = document.querySelector('.container-operation-with-finlists')
+// - Кнопка раскрытия списка действий над финлистами (+ определение номера эелемента финлиста в)
+const btnModalMov = document.querySelector('.btn-all-finlist-operations')
 
-// - Бокс с вариантами действий 
+// - Общий Box с вариантами действий 
 const boxOperations = document.querySelector('.box-operations-list')
+
+// -- Box добавления movements
 const boxAddMov = document.querySelector('.box-operations-add-movements')
+
+// -- Box Sharing setting
 const boxShareFL = document.querySelector('.box-operations-share')
 
+// -- Button delete FinList
+const btnRemoveFinList = document.querySelector('.btn-removeFinList')
 
-// -- Action links
+
+// - Action links
 const linkAddMov = document.querySelector('.btn-add-movements')
 const linkShareFL = document.querySelector('.btn-share-fl')
 
 
+// - Стрелки возврата на основной экран выбора действий
+const backFromMov = document.querySelector('.back-from-add-mov')
+const backFromShare = document.querySelector('.back-from-sharing')
+
 
 // ! Box Add Movements
 // -- Buttons
-const btnModalMov = document.querySelector('.btn-addFinMove')
 const btnAddNewMov = document.querySelector('.btn-addMov')
-
-const btnAddNewMovPlus = document.querySelector('.btn-addMov-plus')
 
 // -- Input
 const inputMovFLamount = document.querySelector('.input-add-mov-amount')
@@ -121,15 +132,15 @@ const btnDeleteMember = document.querySelector('.btn-delete-member')
 
 
 
+// ! Overlay
+const overlay = document.querySelector('.container-overlay')
 
 
-// Modal Window Add Movements on Plus Btn
-const modalMovementsPlusBtn = document.querySelector('.container-modal-add-movements-PlusBtn')
-
-
-// Welcome title
+// ! Welcome title
 const welcomeTitle = document.querySelector('.welcome-title')
 
-// Logout box
+// ! Logout box
 const logout = document.querySelector('.logout-box')
+
+
 

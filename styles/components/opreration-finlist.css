@@ -7,9 +7,14 @@
 .operation-add-movements,
 .operation-share-setting,
 .operation-delete-fl {
-  height: 60px;
+  height: 50px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+
+.operation-delete-fl {
+  border-top: 1px solid #6e4048;
 }
 
 
@@ -19,6 +24,18 @@
   position: relative;
 }
 
+
+
+.add-ico {
+opacity: .7;
+margin-right: 10px;
+}
+
+
+.ico_img_group {
+  display: flex;
+  align-items: center;
+}
 
 
 

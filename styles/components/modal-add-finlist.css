@@ -13,3 +13,8 @@
 .input-fl-mov:focus {
   outline: none;
 }
+
+.input-add-finlist-cur {
+  width: 100%;
+  padding-right: 10px;
+}

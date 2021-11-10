@@ -149,16 +149,26 @@
         <div class="box-operations-list">
 
           <div class="operation-add-movements">
-            <p class="btn-add-movements">Add Movements &#8594</p>
+            <div class="ico_img_group">
+              <img src="img/add.svg" alt="" class="add-ico">
+              <p class="btn-add-movements">Add Movements</p>
+            </div>
+
+            <img src="img/next.svg" alt="" class="next-ico">
           </div>
 
           <div class="operation-share-setting">
-            <p class="btn-share-fl">Share Setting &#8594</p>
+            <div class="ico_img_group">
+              <img src="img/share.svg" alt="" class="add-ico">
+              <p class="btn-share-fl">Sharing Setting</p>
+            </div>
+            <img src="img/next.svg" alt="" class="next-ico">
           </div>
 
           <!-- кнопка удаления финлиста -->
           <div class="operation-delete-fl">
-            <a href="#" class="btn btn-removeFinList">Rem FL</a>
+            <img src="img/delete.svg" alt="" class="add-ico">
+            <a href="#" class="btn btn-removeFinList">Delete Finlist</a>
           </div>
 
         </div>
@@ -198,7 +208,10 @@
 
         <!-- добавление ФинЛиста -->
         <input type="text" class="input-fl-mov input-add-finlist-name" placeholder="Name">
-        <input type="text" class="input-fl-mov input-add-finlist-cur" placeholder="Currency">
+        <select type="text" class="input-fl-mov input-add-finlist-cur" placeholder="Currency">
+          <option value="rub">Rub</option>
+          <option value="usd">Usd</option>
+        </select>
 
         <a href="#" class="btn btn-addFinList">Add FL</a>
 

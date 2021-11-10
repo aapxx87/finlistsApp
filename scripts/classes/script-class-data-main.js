@@ -320,9 +320,9 @@ class MainData {
         itemNew.finlistMovements.forEach(function (itemMov) {
 
           htmlMov = htmlMov + `
-          <tr>
-            <td class="col">${itemMov.movDate}</td>
-            <td class="col">${itemMov.movAmount}</td>
+          <tr class="tr">
+            <td class="col-date">${itemMov.movDate}</td>
+            <td class="col-amount">${itemMov.movAmount}</td>
           </tr>
         `
 
@@ -372,13 +372,12 @@ class MainData {
 
         // формируем таблицу со всеми движениями
         const htmlMovTable = `
-        <table class="finlist-table">
-          <tr>
-          <td class="col table-header">Date</td>
-          <td class="col table-header">Amount</td>
-          </tr>
-          ${htmlMov}
-        </table>
+        <div class="finlist-table">
+          <h3 class="table-title">Activity</h3>
+          <table class="table">
+            ${htmlMov}
+          </table>
+        </div>
       `
 
         // формируем финальную таблицу Заголовок + Таблица Движений по Финлисту (cсклеиваем Title + Movements)
@@ -416,10 +415,10 @@ class MainData {
         itemNew.finlistMovements.forEach(function (itemMov) {
 
           htmlMov = htmlMov + `
-            <tr>
-              <td class="col">${itemMov.movDate}</td>
-              <td class="col">${itemMov.movAmount}</td>
-              <td class="col">${itemMov.exRate}</td>
+            <tr class="tr">
+              <td class="col-date">${itemMov.movDate}</td>
+              <td class="col-amount">${itemMov.movAmount}</td>
+              <td class="col-amount">${itemMov.exRate}</td>
             </tr>
           `
         })
@@ -462,14 +461,13 @@ class MainData {
 
         // формируем таблицу со всеми движениями
         const htmlMovTable = `
-          <table class="finlist-table">
-          <tr>
-            <td class="col table-header">Date</td>
-            <td class="col table-header">Amount</td>
-            <td class="col table-header">Ex rate</td>
-          </tr>
+        <div class="finlist-table">
+          <h3 class="table-title">Activity</h3>
+          <table class="table">
             ${htmlMov}
           </table>
+        </div>
+
         `
 
         // формируем финальную таблицу Заголовок + Таблица Движений по Финлисту (cсклеиваем Title + Movements)

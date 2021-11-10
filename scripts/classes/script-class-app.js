@@ -107,9 +107,9 @@ class App {
 
       this.displayWarningNotification('Неправильный логин или пароль', '#EF3957', boxWarningLogin)
 
-      this.labelDown()
-
       this.clearInputValue()
+
+      this.labelDown()
 
     }
 
@@ -137,6 +137,7 @@ class App {
   labelDown() {
     labels.forEach(function (el) {
       el.classList.remove('labelActive')
+      console.log(el);
     })
   }
 

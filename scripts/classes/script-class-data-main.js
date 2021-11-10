@@ -81,7 +81,10 @@ class MainData {
     })
 
 
-    this.currentUser = check.userName
+    if (check) {
+      this.currentUser = check.userName
+    }
+
 
     // условие: если юзер существует и его пароль равен паролю передаваемому в качестве аргумента, то вход, иначе нотификашка об ошибке
     if (check && check.userPassword === +password) {

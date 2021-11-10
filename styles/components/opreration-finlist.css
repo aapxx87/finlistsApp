@@ -44,6 +44,11 @@
 .box-operations-share {
   display: none;
   position: relative;
+  height: 433px;
+}
+
+.back-from-sharing .box-title {
+  margin-left: 60px;
 }
 
 

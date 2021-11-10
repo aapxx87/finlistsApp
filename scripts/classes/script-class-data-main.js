@@ -322,7 +322,7 @@ class MainData {
           htmlMov = htmlMov + `
           <tr class="tr">
             <td class="col-date">${itemMov.movDate}</td>
-            <td class="col-amount">${itemMov.movAmount}</td>
+            <td class="col-amount">${new Intl.NumberFormat('ru-RU').format(itemMov.movAmount)}</td>
           </tr>
         `
 
@@ -364,7 +364,7 @@ class MainData {
         <div class="finlist-header">
             <div class="toggle-click-open">
             <h3 class="finList-title">${item.finlistName} <span>(${item.finlistCurrency})${shareHTMLnumber}${shareListOwner}</span></h3>
-            <h3 class="finList-total">Total: ${sumAllMovements} </h3>
+            <h3 class="finList-total">Total: ${new Intl.NumberFormat('ru-RU').format(sumAllMovements)}</h3>
             </div>
             <p class="btn-all-finlist-operations ${index}">+</p>
         </div>

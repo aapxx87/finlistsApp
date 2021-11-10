@@ -137,7 +137,6 @@ class App {
   labelDown() {
     labels.forEach(function (el) {
       el.classList.remove('labelActive')
-      console.log(el);
     })
   }
 

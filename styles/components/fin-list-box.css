@@ -13,7 +13,7 @@
 }
 
 .more-ico {
-  opacity: .4;
+  opacity: .2;
   border: 1px solid #4a4f81;
   border-radius: 50%;
   margin-top: 6px;
@@ -44,6 +44,11 @@
   font-weight: 200;
   font-size: 15px;
   color: #a3b3bd;
+}
+
+.finList-total span {
+  color: #cf6d7e;
+  font-weight: 600;
 }
 
 .finlist-invites-check {

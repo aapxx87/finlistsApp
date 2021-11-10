@@ -367,7 +367,7 @@ class MainData {
         <div class="finlist-header">
             <div class="toggle-click-open">
             <h3 class="finList-title">${item.finlistName} <span>(${item.finlistCurrency})${shareHTMLnumber}${shareListOwner}</span></h3>
-            <h3 class="finList-total">Total: ${new Intl.NumberFormat('ru-RU').format(sumAllMovements)}</h3>
+            <h3 class="finList-total">Total: <span>${new Intl.NumberFormat('ru-RU').format(sumAllMovements)}</span></</h3>
             </div>
             <div class="btn-all-finlist-operations ${index}"><img src="img/more.svg" alt="" class="more-ico"></div>
         </div>
@@ -456,7 +456,7 @@ class MainData {
           <div class="finlist-header">
               <div class="toggle-click-open">
               <h3 class="finList-title">${item.finlistName} <span>(${item.finlistCurrency})${shareHTMLnumber}${shareListOwner}</span></h3>
-              <h3 class="finList-total">Total: ${sumAllMovements} </h3>
+              <h3 class="finList-total">Total: <span>${sumAllMovements}</span> </h3>
               </div>
               <div class="btn-all-finlist-operations ${index}"><img src="img/more.svg" alt="" class="more-ico"></div>
           </div>

@@ -116,6 +116,9 @@ const btnAddNewMov = document.querySelector('.btn-addMov')
 const inputMovFLamount = document.querySelector('.input-add-mov-amount')
 const inputMovFLexrate = document.querySelector('.input-add-mov-exrate')
 
+// -- Labels
+const addMovLabel = document.querySelector('.label-input-add-movements')
+
 
 
 // ! Box Share Settings

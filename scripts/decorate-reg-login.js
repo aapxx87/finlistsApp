@@ -38,6 +38,8 @@ labelClickMoveUp(inputUsernameSignUpPassRepeatLabel, inputRepeatPassword)
 labelClickMoveUp(inputUsernameLoginLabel, inputUsernameLogin)
 labelClickMoveUp(inputUsernameLoginPassLabel, inputPasswordLogin)
 
+labelClickMoveUp(addMovLabel, inputMovFLamount)
+
 
 // функция для отъезжания лейбла вверх при клике (фокусе) на инпуте
 const inputLabelAnimationIn = function (inputName, labelName) {
@@ -80,3 +82,7 @@ inputLabelAnimationOut(inputUsernameLogin, inputUsernameLoginLabel)
 
 inputLabelAnimationIn(inputPasswordLogin, inputUsernameLoginPassLabel)
 inputLabelAnimationOut(inputPasswordLogin, inputUsernameLoginPassLabel)
+
+
+inputLabelAnimationIn(inputMovFLamount, addMovLabel)
+inputLabelAnimationOut(inputMovFLamount, addMovLabel)

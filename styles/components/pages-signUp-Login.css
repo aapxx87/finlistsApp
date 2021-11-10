@@ -26,7 +26,8 @@
 .input-box-signUp-password,
 .input-box-signUp-password-rep,
 .input-username-log-box,
-.input-password-log-box
+.input-password-log-box,
+.input-add-mov-amount
  {
   position: relative;
 }
@@ -35,7 +36,8 @@
 .label-input-box-signUp-password,
 .label-input-box-signUp-password-rep,
 .label-input-box-login-username,
-.label-input-box-login-password {
+.label-input-box-login-password,
+.label-input-add-movements {
   position: absolute;
   top: 9px;
   left: 15px;

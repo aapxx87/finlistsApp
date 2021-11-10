@@ -58,6 +58,10 @@ opacity: .7;
 margin-right: 10px;
 }
 
+.back-ico {
+  opacity: .5;
+}
+
 
 .ico_img_group {
   display: flex;

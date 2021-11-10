@@ -7,14 +7,16 @@
 .operation-add-movements,
 .operation-share-setting,
 .operation-delete-fl {
-  height: 50px;
+  height: 65px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .operation-delete-fl {
+  margin-top: 30px;
   border-top: 1px solid #6e4048;
+  height: 50px;
 }
 
 

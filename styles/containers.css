@@ -82,6 +82,7 @@
 /* контейнер выбора действий над финлистами */
 .container-operation-with-finlists {
   width: 75%;
+  height: 230px;
   padding: 10px 15px;
   background: #2C2E52;
   position: absolute;
@@ -90,7 +91,7 @@
   transform: translateX(-50%);
   text-align: center;
   z-index: 10;
-  /* border: 1px solid #fff; */
+  border-radius: 10px;
   display: none;
 }
 

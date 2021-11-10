@@ -12,6 +12,13 @@
   display: flex;
 }
 
+.more-ico {
+  opacity: .4;
+  border: 1px solid #4a4f81;
+  border-radius: 50%;
+  margin-top: 6px;
+}
+
 .toggle-click-open {
   width: 300px;
   justify-content: space-between;

@@ -2,8 +2,13 @@
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background: rgb(101, 79, 153);
+  /* background: #654f99; */
   position: absolute;
   top: -3px;
-  right: 8px;
+  right: 0;
+}
+
+
+.logout-ico {
+  opacity: .2;
 }

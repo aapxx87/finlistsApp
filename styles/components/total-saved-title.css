@@ -1,6 +1,6 @@
 .accumulate-number {
-  font-size: 25px;
-  margin-bottom: 10px;
+  font-size: 30px;
+  margin-bottom: 4px;
   display: inline-block;
   position: relative;
 }
@@ -16,5 +16,6 @@
 .accumulate-title {
   font-size: 15px;
   color: #a3b3bd;
+  opacity: .6;
 }
 

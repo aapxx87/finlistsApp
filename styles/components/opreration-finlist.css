@@ -10,7 +10,7 @@
 }
 
 .operation-delete-fl {
-  margin-top: 30px;
+  margin-top: 100px;
   border-top: 1px solid #6e4048;
   height: 50px;
 }
@@ -19,6 +19,7 @@
 
 .operation-details {
   margin-top: 15px;
+  display: none;
 }
 
 .details-list {
@@ -43,7 +44,7 @@
 .box-operations-share {
   display: none;
   position: relative;
-  height: 433px;
+  height: 300px;
 }
 
 

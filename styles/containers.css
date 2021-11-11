@@ -87,7 +87,7 @@
 /* контейнер выбора действий над финлистами */
 .container-operation-with-finlists {
   width: 75%;
-  /* height: 230px; */
+  height: 300px;
   padding: 10px 15px;
   background: #2C2E52;
   position: absolute;
@@ -98,14 +98,4 @@
   z-index: 10;
   border-radius: 10px;
   display: none;
-}
-
-
-/* контейнер модалки добавления movements по кнопке Add Mov */
-.container-modal-add-movements {
-  width: 100%;
-  padding: 20px;
-  background: #2C2E52;
-  text-align: center;
-  z-index: 10;
 }

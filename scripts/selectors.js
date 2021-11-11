@@ -9,6 +9,7 @@ const loginContainer = document.querySelector('.container-login')
 const signUpContainer = document.querySelector('.container-signup')
 
 const mainPageContainer = document.querySelector('.container-mainPage')
+const contaAccumBal = document.querySelector('.container-accumulate-balance')
 const containerFinLists = document.querySelector('.container-finList')
 const cntOperationsFL = document.querySelector('.container-operation-with-finlists')
 
@@ -67,6 +68,9 @@ const boxWarningLogin = document.querySelector('.notification-login')
 
 
 // ** MAIN PAGE
+
+// ! Total balance block
+const accNumber = document.querySelector('.accumulate-number')
 
 // ! Modal Window Add New Fin List
 const modalFinList = document.querySelector('.container-modal-add-finlist')

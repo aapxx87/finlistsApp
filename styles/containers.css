@@ -33,6 +33,7 @@
 .container-accumulate-balance {
   margin-top: 30px;
   text-align: center;
+  position: relative;
 }
 
 /* контейнер куда выгружаются комоненты финлистов */

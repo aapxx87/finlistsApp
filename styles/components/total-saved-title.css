@@ -1,9 +1,20 @@
 .accumulate-number {
   font-size: 25px;
   margin-bottom: 10px;
+  display: inline-block;
+  position: relative;
 }
+
+.accumulate-number span {
+  font-size: 12px;
+  color: #a3b3bd;
+  position: absolute;
+  top: -2px;
+  right: -10px;
+} 
 
 .accumulate-title {
   font-size: 15px;
   color: #a3b3bd;
 }
+

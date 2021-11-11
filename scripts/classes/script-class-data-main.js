@@ -618,6 +618,8 @@ class MainData {
 
     const totalBalance = usdToRub + rubTotal
 
+    accNumber.innerHTML = `${new Intl.NumberFormat('ru-RU').format(totalBalance)}<span>&#8381</span>`
+
 
   }
 

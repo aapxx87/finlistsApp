@@ -4,7 +4,6 @@
   height: 100vh;
   color: #fff;
   padding: 30px 25px;
-  /* background: #25273F; */
 }
 
 /* контейнер с решистрацией и логином */
@@ -30,7 +29,7 @@
   display: none;
 }
 
-
+/* контейнер отображения суммарного баланса на главной старнице */
 .container-accumulate-balance {
   margin-top: 30px;
   text-align: center;
@@ -59,7 +58,6 @@
 /* контейнер модалки добавления финлистов */
 .container-modal-add-finlist {
   width: 70%;
-  /* height: 320px; */
   background: #2C2E52;
   position: absolute;
   top: 100px;

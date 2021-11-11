@@ -72,6 +72,21 @@
   color: #EF3957;
 }
 
+/* Кнопки переключения между логином и регой */
+.reg-mode {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+.reg-mode a {
+  color: #fff;
+  text-decoration: none;
+  color:#EF3957;
+  border-bottom: 1px solid #fff;
+  border-color: #EF3957;
+}
+
 
 
 

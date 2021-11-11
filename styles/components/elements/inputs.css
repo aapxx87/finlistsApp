@@ -1,0 +1,61 @@
+/* страницы регистрации и логина */
+input {
+  border: 1px solid #7A3A5D;
+  background: transparent;
+  width: 100%;
+  border-radius: 50px;
+  color: rgb(204, 202, 202);
+  padding: 10px 15px;
+  font-size: 16px;
+  z-index: 10;
+}
+
+input:focus {
+  outline: none;
+}
+
+
+.input-box-signUp-username,
+.input-box-signUp-password,
+.input-box-signUp-password-rep,
+.input-username-log-box,
+.input-password-log-box,
+.input-add-mov-amount
+ {
+  position: relative;
+}
+
+
+
+/* модалка добавления нового финлиста */
+.input-fl-mov {
+  border: 1px solid #7A3A5D;
+  background: transparent;
+  border-radius: 50px;
+  color: rgb(204, 202, 202);
+  padding: 10px 15px;
+  font-size: 16px;
+  margin: 20px auto;
+  display: block;
+}
+
+.input-fl-mov:focus {
+  outline: none;
+}
+
+.input-add-finlist-cur {
+  width: 100%;
+}
+
+
+/* test - финлист символ валюты у значения total */
+.valute-symbol {
+  position: absolute;
+  font-size: 9px;
+  display: inline-block;
+  margin-top: -5px;
+  top: 30px;
+  left: 78px;
+  color: #cf6d7e;
+}
+

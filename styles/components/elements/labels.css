@@ -1,0 +1,21 @@
+.label-input-box-signUp-username,
+.label-input-box-signUp-password,
+.label-input-box-signUp-password-rep,
+.label-input-box-login-username,
+.label-input-box-login-password,
+.label-input-add-movements {
+  position: absolute;
+  top: 9px;
+  left: 15px;
+  color: #8E939E;
+  transition: all .3s;
+  z-index: 1;
+}
+
+.labelActive {
+  position: absolute;
+  top: -22px;
+  left: 16px;
+  color: #8E939E;
+  font-size: 14px;
+}

@@ -1,0 +1,26 @@
+.logout-ico {
+  opacity: .2;
+}
+
+
+/* кнопка открытия модалки с возможными операциями с ФЛ */
+.more-ico {
+  opacity: .3;
+  border: 1px solid #4a4f81;
+  border-radius: 50%;
+  margin-top: 6px;
+}
+
+
+/* бокс с операциями по финлисту */
+.ico-operation {
+  opacity: .7;
+  margin-right: 10px;
+}
+
+  
+.back-ico {
+  opacity: .5;
+}
+  
+  

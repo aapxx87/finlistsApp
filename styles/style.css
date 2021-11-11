@@ -1,27 +1,23 @@
-@import url('containers.css');
-
-@import url('components/buttons.css');
-@import url('components/pages-signUp-Login.css');
-@import url('components/fin-list-box.css');
-@import url('components/table.css');
-@import url('components/modal-add-finlist.css');
-
-@import url('components/unsorted.css');
-@import url('components/opreration-finlist.css');
+@import url('general.css'); /* стили для всех container */
+@import url('containers.css'); /* стили для всех container */
 
 
+@import url('components/pages-signUp-Login.css'); /* стили для страницы регистрации и логина */
+@import url('components/fin-list-box.css'); /* стили всего что относится к карточке финлиста (кроме таблицы) */
+@import url('components/table.css'); /* стили таблицы с движениями mov в карточке финлиста */
+@import url('components/opreration-finlist.css'); /* стили для блока операций с финлистами */
+@import url('components/logout.css'); /* стили кнопки разлогинивания */
+@import url('components/total-saved-title.css'); /* стили цифра суммарного баланса на главной странице */
+@import url('components/unsorted.css'); /* несортированное */
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
 
-body {
-  background: #25273F;
-  overflow: hidden;
-}
+@import url('components/elements/buttons.css');
+@import url('components/elements/inputs.css'); 
+@import url('components/elements/icons.css'); 
+@import url('components/elements/labels.css'); 
+@import url('components/elements/notification.css'); 
 
+/* используется в JS, чтобы делать блоки видимыми */
 .visible {
   display: block;
 }

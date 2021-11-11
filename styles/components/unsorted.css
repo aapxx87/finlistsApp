@@ -1,24 +1,2 @@
-.logout-box {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  /* background: #654f99; */
-  position: absolute;
-  top: -3px;
-  right: 0;
-}
 
 
-.logout-ico {
-  opacity: .2;
-}
-
-.accumulate-number {
-  font-size: 25px;
-  margin-bottom: 10px;
-}
-
-.accumulate-title {
-  font-size: 15px;
-  color: #a3b3bd;
-}

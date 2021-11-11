@@ -1,9 +1,5 @@
 
-.operations-list {
-  width: 100%;
-  height: 100%;
-}
-
+/* блоки с выборами вариантов действий */
 .operation-add-movements,
 .operation-share-setting,
 .operation-delete-fl {
@@ -18,6 +14,8 @@
   border-top: 1px solid #6e4048;
   height: 50px;
 }
+
+/* стили для блока Details */
 
 .operation-details {
   margin-top: 15px;
@@ -40,6 +38,7 @@
 }
 
 
+/* боксы с конкретными экшенами */
 .box-operations-add-movements,
 .box-operations-share {
   display: none;
@@ -47,26 +46,20 @@
   height: 433px;
 }
 
+
+/* Стили для title блока с конкретными действиями */
 .back-from-sharing .box-title {
   margin-left: 60px;
 }
 
-
-
-.add-ico {
-opacity: .7;
-margin-right: 10px;
-}
-
-.back-ico {
-  opacity: .5;
-}
-
-
+/* контейнер объединения иконки и названия пункта в блоке с возможными операциями с ФЛ */
 .ico_img_group {
   display: flex;
   align-items: center;
 }
+
+
+
 
 
 

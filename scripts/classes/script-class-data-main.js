@@ -358,10 +358,6 @@ class MainData {
 
 
 
-
-
-
-
         // формируем заголовок с Title каждого финлиста
         let htmlMovTitle = `
         <div class="finlist-header">
@@ -495,6 +491,8 @@ class MainData {
 
     this.finListNumberInArr()
 
+    this.calcTotalBalance()
+
 
   }
 
@@ -506,6 +504,7 @@ class MainData {
 
     let compFinListArr = document.querySelectorAll('.toggle-click-open')
     let finListTable = document.querySelectorAll('.finlist-table')
+
 
     compFinListArr.forEach(function (el, idx) {
       el.addEventListener('click', function () {
@@ -584,6 +583,44 @@ class MainData {
 
   }
 
+  // метод подсчета суммарного баланса по всем финлистам юзера - owner (вывод на главной) с пересчетмо в рубли
+  calcTotalBalance() {
+
+    const userOwnerFinLists = this.#finlists.filter(function (el) {
+      return el.owner === appData.currentUser
+    })
+
+    let rubTotal = 0
+    let usdTotal = 0
+
+    console.log(userOwnerFinLists);
+
+    userOwnerFinLists.forEach(function (el) {
+
+      if (el.finlistCurrency === 'rub') {
+
+        el.finlistMovements.forEach(function (el) {
+          rubTotal = rubTotal + el.movAmount
+        })
+
+      } else if (el.finlistCurrency === 'usd') {
+
+        el.finlistMovements.forEach(function (el) {
+          usdTotal = usdTotal + el.movAmount
+        })
+
+      }
+
+    })
+
+
+    const usdToRub = usdTotal * 72
+
+    const totalBalance = usdToRub + rubTotal
+
+
+  }
+
 
 
 }
@@ -592,6 +629,7 @@ class MainData {
 
 // создаем инстанс основной даты прилы
 const appData = new MainData()
+
 
 
 

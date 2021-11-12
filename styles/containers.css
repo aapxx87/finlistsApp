@@ -4,6 +4,7 @@
   height: 100vh;
   color: #fff;
   padding: 30px 25px;
+  position: relative;
 }
 
 /* контейнер с решистрацией и логином */

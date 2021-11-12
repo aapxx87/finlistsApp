@@ -29,7 +29,7 @@
   height: 34px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #6e4048;
+  border-top: 1px solid #6e4048;
   max-width: 280px;
   padding: 3px;
 }

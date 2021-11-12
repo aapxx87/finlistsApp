@@ -643,11 +643,12 @@ appData.addNewFinlist('Дом', 'rub', 'Katya')
 
 
 // Предустанавливаем Mov в Финлист Накопления
-appData.addNewMovements(0, 26300, '', '01.01.2021')
-appData.addNewMovements(0, 30000, '', '01.02.2021')
+appData.addNewMovements(0, 26300, '', '01.11.2021')
+appData.addNewMovements(0, 30000, '', '27.10.2021')
 
 
 // Предустанавливаем Mov в Финлист Инвестиции
+appData.addNewMovements(2, 13660, '', '12.11.21')
 appData.addNewMovements(2, 11508, '', '03.11.21')
 appData.addNewMovements(2, 30500, '', '10.07.20')
 appData.addNewMovements(2, 12864, '', '25.03.20')
